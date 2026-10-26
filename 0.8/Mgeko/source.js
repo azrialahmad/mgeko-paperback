@@ -14963,11 +14963,11 @@ var _Sources = (() => {
   var buildSubtitle = (card, mode, period) => {
     const parts = [];
     if ((mode === "both" || mode === "rating") && card.rating !== void 0) {
-      parts.push(`\u2B50 ${card.rating.toFixed(1)}`);
+      parts.push(`\u2605 ${card.rating.toFixed(1)}`);
     }
     if (mode === "both" || mode === "views") {
       const views = pickViews(card, period);
-      if (views !== void 0) parts.push(`\u{1F441} ${formatCount(views)}`);
+      if (views !== void 0) parts.push(`\u25B2 ${formatCount(views)}`);
     }
     return parts.length ? parts.join(" \xB7 ") : void 0;
   };
@@ -15008,10 +15008,10 @@ var _Sources = (() => {
     const summaryIdx = desc.indexOf("The Summary is");
     if (summaryIdx !== -1) desc = desc.slice(summaryIdx + "The Summary is".length).trim();
     const statsLine = [
-      rating !== void 0 ? `\u2B50 ${rating.toFixed(1)}${ratingVotes ? ` (${ratingVotes} votes)` : ""}` : "",
-      views ? `\u{1F441} ${views} views` : "",
-      bookmarks ? `\u{1F516} ${bookmarks} bookmarks` : "",
-      lastUpdate ? `\u{1F552} updated ${lastUpdate} ago` : ""
+      rating !== void 0 ? `\u2605 ${rating.toFixed(1)}${ratingVotes ? ` (${ratingVotes} votes)` : ""}` : "",
+      views ? `\u25B2 ${views} views` : "",
+      bookmarks ? `${bookmarks} bookmarks` : "",
+      lastUpdate ? `updated ${lastUpdate} ago` : ""
     ].filter(Boolean).join("  \xB7  ");
     const tags = genres.length ? [App.createTagSection({ id: "genres", label: "Genres", tags: genres.map(genreTag) })] : [];
     return App.createSourceManga({
@@ -15275,7 +15275,7 @@ ${desc}` : desc,
   // src/Mgeko/Mgeko.ts
   var BASE_URL = "https://www.mgeko.cc";
   var MgekoInfo = {
-    version: "1.0.0",
+    version: "1.0.1",
     name: "Mgeko",
     icon: "icon.png",
     author: "Azrial Ahmad",

@@ -56,7 +56,7 @@ const show = (items, n = 3) => items.slice(0, n).map(i => `      ${i.title}  [${
         check(s.items.length > 0 && s.items.every(i => i.mangaId && i.title && i.image), `home "${s.title}": ${s.items.length} items`)
         console.log(show(s.items, 2))
     }
-    const subtitled = [...sections.values()].flatMap(s => s.items).filter(i => /⭐/.test(i.subtitle ?? '') && /👁/.test(i.subtitle ?? ''))
+    const subtitled = [...sections.values()].flatMap(s => s.items).filter(i => /★/.test(i.subtitle ?? '') && /▲/.test(i.subtitle ?? ''))
     check(subtitled.length > 0, `cards show stars + views (${subtitled.length} with both)`)
 
     // View more paging: page 1 -> 2 -> 3, no repeats
@@ -106,7 +106,7 @@ const show = (items, n = 3) => items.slice(0, n).map(i => `      ${i.title}  [${
     // Settings change the subtitle
     await state.set('subtitle_mode', 'rating')
     const ratingOnly = await source.getViewMoreItems('latest', undefined)
-    check(ratingOnly.results.every(i => !/👁/.test(i.subtitle ?? '')), 'subtitle setting "rating only" is respected')
+    check(ratingOnly.results.every(i => !/▲/.test(i.subtitle ?? '')), 'subtitle setting "rating only" is respected')
 
     console.log(failures ? `\n${failures} check(s) failed` : '\nAll checks passed')
     process.exit(failures ? 1 : 0)

@@ -43,7 +43,7 @@ import {
 const BASE_URL = 'https://www.mgeko.cc'
 
 export const MgekoInfo: SourceInfo = {
-    version: '1.0.0',
+    version: '1.0.1',
     name: 'Mgeko',
     icon: 'icon.png',
     author: 'Azrial Ahmad',

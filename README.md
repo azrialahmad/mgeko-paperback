@@ -2,7 +2,7 @@
 
 Paperback 0.8 source for [mgeko.cc](https://www.mgeko.cc).
 
-- Every list (homepage rows, "view more", search) shows **⭐ rating · 👁 views** under each title.
+- Every list (homepage rows, "view more", search) shows **★ rating · ▲ views** (flat text symbols, not emoji) under each title.
 - Homepage: Popular Today, Latest Updates, Popular This Week, New Series, Popular This Month, Most Viewed, Top Rated. "View more" pages correctly and stops on the last page.
 - Search by title plus filters: sort, status, type, and include/exclude genres.
 - The series page description opens with rating (and vote count), total views, bookmarks and last update.

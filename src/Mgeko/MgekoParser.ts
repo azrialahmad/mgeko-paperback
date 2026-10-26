@@ -68,11 +68,11 @@ export const cardToPartial = (card: BrowseCard, mode: SubtitleMode, period: View
 const buildSubtitle = (card: BrowseCard, mode: SubtitleMode, period: ViewPeriod): string | undefined => {
     const parts: string[] = []
     if ((mode === 'both' || mode === 'rating') && card.rating !== undefined) {
-        parts.push(`⭐ ${card.rating.toFixed(1)}`)
+        parts.push(`★ ${card.rating.toFixed(1)}`)
     }
     if (mode === 'both' || mode === 'views') {
         const views = pickViews(card, period)
-        if (views !== undefined) parts.push(`👁 ${formatCount(views)}`)
+        if (views !== undefined) parts.push(`▲ ${formatCount(views)}`)
     }
     return parts.length ? parts.join(' · ') : undefined
 }
@@ -142,10 +142,10 @@ export const parseMangaDetails = ($: CheerioAPI, mangaId: string): SourceManga =
     if (summaryIdx !== -1) desc = desc.slice(summaryIdx + 'The Summary is'.length).trim()
 
     const statsLine = [
-        rating !== undefined ? `⭐ ${rating.toFixed(1)}${ratingVotes ? ` (${ratingVotes} votes)` : ''}` : '',
-        views ? `👁 ${views} views` : '',
-        bookmarks ? `🔖 ${bookmarks} bookmarks` : '',
-        lastUpdate ? `🕒 updated ${lastUpdate} ago` : ''
+        rating !== undefined ? `★ ${rating.toFixed(1)}${ratingVotes ? ` (${ratingVotes} votes)` : ''}` : '',
+        views ? `▲ ${views} views` : '',
+        bookmarks ? `${bookmarks} bookmarks` : '',
+        lastUpdate ? `updated ${lastUpdate} ago` : ''
     ].filter(Boolean).join('  ·  ')
 
     const tags: TagSection[] = genres.length

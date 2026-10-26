@@ -2,7 +2,7 @@
   "name": "mgeko-paperback",
   "version": "1.0.0",
   "repositoryName": "Mgeko (Paperback 0.8)",
-  "baseURL": "https://azrialahmad.github.io/mgeko-paperback",
+  "baseURL": "https://azrialahmad.is-a.dev/mgeko-paperback/0.8",
   "noAddToPaperbackButton": false,
   "description": "Paperback 0.8 extension for mgeko.cc",
   "private": true,

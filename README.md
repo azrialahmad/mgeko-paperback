@@ -31,4 +31,5 @@ that period's number; other lists show the largest of the three. The details pag
 ## Publishing
 
 Pushing to `main` runs `.github/workflows/publish.yml`, which bundles into the `gh-pages` branch under `0.8/`.
-Enable GitHub Pages on `gh-pages`, then add `https://azrialahmad.github.io/mgeko-paperback/0.8` in Paperback.
+GitHub Pages serves `gh-pages`; add `https://azrialahmad.is-a.dev/mgeko-paperback/0.8` in Paperback
+(or open that page on your phone and tap "Add to Paperback").
